@@ -21,6 +21,8 @@ class TrollCalculator(Tk):
 
         # Entry + history
         self.__create_entry_widgets()
+        self.clicked_equal = False  # tricky flag... need to change it later
+        # Flag necessária para ressetar o ANS após pressionar o botão de '='
 
         # Buttons
         self.buttons = []
@@ -85,6 +87,9 @@ class TrollCalculator(Tk):
 
     def __write_number(self, number):
         if not self.troll_enable.get():
+            if self.clicked_equal:
+                self.operation = None
+                self.ans = 0
             _text = self.entry_text.get()
             if number == '<<':
                 self.entry_text.set('0' if len(_text) == 1 else _text[:-1])
@@ -98,15 +103,21 @@ class TrollCalculator(Tk):
             if operation == '<<':
                 self.__write_number(operation)
             elif operation == '=':
+                self.clicked_equal = True
                 if self.operation is not None:
                     self.__run_equal()
                     self.__update_labels()
-                self.operation = None
+                # self.operation = None
                 self.entry_text.set(0)
             else:
-                self.operation = operation
-                self.tmp = float(self.entry_text.get())
-                self.ans = self.tmp
+                self.clicked_equal = False
+                if self.operation is not None:
+                    self.__run_equal()
+                    self.operation = operation
+                else:
+                    self.operation = operation
+                    self.tmp = float(self.entry_text.get())
+                    self.ans = self.tmp
                 self.__update_labels()
                 self.entry_text.set(0)
         else:
@@ -117,7 +128,6 @@ class TrollCalculator(Tk):
         self.ans = self.__math()
 
     def __math(self):
-        print(self.operation)
         if self.operation == '+':
             return self.ans + self.tmp
         elif self.operation == '-':
