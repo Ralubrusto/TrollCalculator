@@ -2,13 +2,9 @@
 
 Uma calculadora inegavelmente única..
 
-Desenvolvida apenas com `Python3.8` e `tkinter`, ela apresenta uma pequena releitura do que seria um cálculo impossível.
+Desenvolvida apenas com `Python3.8` e `tkinter`, ela apresenta uma pequena releitura do que seria um cálculo impossível, afinal: "O impossível é só questão de perspectiva".
 
-"O impossível é só questão de perspectiva"
-
-Ao calcular relações numéricas temidas, como a boa e velha divisão por zero, novas possibilidades se apresentam.
-
-Afinal... ao fazer o impossível, novas possibilidades sempre aparecem.
+Ao calcular relações numéricas temidas, como a boa e velha divisão por zero, novas possibilidades se apresentam. Se você faz o impossível, tudo se torna possível!
 
 Ficou curioso? É só rodar
 
@@ -16,7 +12,9 @@ Ficou curioso? É só rodar
 python3 main.py
 ```
 
-Naquele clichê de sempre.. é pouco mas é de coração. Ela, por enquanto, só aceita uma operação por vez... pra encadear uma após a outra vai precisar de mais feijão
+Ela aceita encadeamento de operações, mas ela considera a operação concluída quando o botão `=` é pressionado. Portanto, ao apertar `=` é como se a memória de cálculos se apagasse.
+
+Naquele clichê de sempre.. é pouco mas é de coração.
 
 Lista `TO DO` de improovements:
   - Interface mais xuxuzinha
