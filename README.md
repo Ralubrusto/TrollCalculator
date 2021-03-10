@@ -18,7 +18,7 @@ python3 main.py
 
 Naquele clichê de sempre.. é pouco mas é de coração.
 
-Lista de improovements:
+Lista `TO DO` de improovements:
   - Interface mais xuxuzinha
   - Botão de "Clear"
   - Parênteses
