@@ -16,7 +16,7 @@ Ficou curioso? É só rodar
 python3 main.py
 ```
 
-Naquele clichê de sempre.. é pouco mas é de coração.
+Naquele clichê de sempre.. é pouco mas é de coração. Ela, por enquanto, só aceita uma operação por vez... pra encadear uma após a outra vai precisar de mais feijão
 
 Lista `TO DO` de improovements:
   - Interface mais xuxuzinha
